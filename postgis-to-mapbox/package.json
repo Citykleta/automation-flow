@@ -1,0 +1,18 @@
+{
+  "name": "postgis-to-mapbox",
+  "version": "1.0.0",
+  "description": "fetch data from a local postgis db to create data set on mapbox service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurent Renard",
+  "license": "MIT",
+  "devDependencies": {
+    "nock": "^10.0.6",
+    "zora": "^3.0.0-0"
+  },
+  "dependencies": {
+    "pg": "^7.8.0"
+  }
+}
