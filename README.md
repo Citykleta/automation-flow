@@ -1,2 +1,2 @@
-# automization-flow
-scripts, triggers for automatization workflow
+# automation-flow
+scripts, triggers etc for workflow automation

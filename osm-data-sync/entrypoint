@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -e
+
+curl https://overpass-api.de/api/map?bbox=${BB_WEST},${BB_NORTH},${BB_EAST},${BB_SOUTH} --compress -o /tmp/data.osm
+
+PG_PORT=${POSTGRES_PORT:-"5432"}
+PG_DB=${POSTGRES_DB}
+PG_USER=${POSTGRES_USER}
+PG_HOST=${POSTGRES_HOST:-"127.0.0.1"}
+PG_PASS=${POSTGRES_PASSWORD}
+
+PGPASSWORD=${PG_PASS} osm2pgsql /tmp/data.osm  --create \
+--host ${PG_HOST} \
+--database ${PG_DB} \
+--username ${PG_USER} \
+--port ${PG_PORT} \
+
+exec "$@"
+
