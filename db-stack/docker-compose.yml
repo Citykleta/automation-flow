@@ -3,7 +3,7 @@ services:
   db:
     image: mdillon/postgis
     env_file:
-      - dev.env
+      - db.dev.env
     ports:
       - "5432:5432"
     restart: always
@@ -12,7 +12,7 @@ services:
     depends_on:
       - db
     env_file:
-      - dev.env
+      - db.dev.env
     environment:
       - POSTGRES_HOST=db
   mapbox:
@@ -20,6 +20,7 @@ services:
     depends_on:
     - db
     env_file:
-    - dev.env
+    - db.dev.env
+    - mapbox.dev.env
     environment:
     - POSTGRES_HOST=db
