@@ -64,3 +64,5 @@ typings/
 .DS_Store
 
 **/node_modules/
+
+**/*.prod.env

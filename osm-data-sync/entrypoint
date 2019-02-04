@@ -14,6 +14,9 @@ PGPASSWORD=${PG_PASS} osm2pgsql /tmp/data.osm  --create \
 --database ${PG_DB} \
 --username ${PG_USER} \
 --port ${PG_PORT} \
+--slim \
+--cache ${CACHE_SIZE}
+
 
 exec "$@"
 

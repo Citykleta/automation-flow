@@ -9,7 +9,7 @@ La Habana is about 10Mb (gzip)
 
 It uses behind the scene:
 - [Curl](https://en.wikipedia.org/wiki/CURL) for downloading the data set
-- [osm2pgsql](https://github.com/openstreetmap/osm2pgsql) to import the data into a [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) (with the PostGIS[https://en.wikipedia.org/wiki/PostGIS] extension) database
+- [osm2pgsql](https://github.com/openstreetmap/osm2pgsql) to import the data into a [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) (with the [PostGIS](https://en.wikipedia.org/wiki/PostGIS) extension) database
 
 ## Usage
 
@@ -30,7 +30,7 @@ It uses the same environment variables than the official [Postgres image](https:
 
 ### example
 
-``docker run --rm -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=osm citykleta/osm-data-sync
+``docker run --rm -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=osm citykleta/osm-data-sync``
 
 Alternatively you can directly use it with a database service through docker-compose.
 

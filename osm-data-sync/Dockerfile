@@ -30,7 +30,7 @@ COPY entrypoint /usr/local/bin
 
 RUN chmod +x /usr/local/bin/entrypoint
 
-ENV BB_WEST=-82.4932 BB_NORTH=23.0241 BB_EAST=-82.1740 BB_SOUTH=23.2003
+ENV BB_WEST=-82.4932 BB_NORTH=23.0241 BB_EAST=-82.1740 BB_SOUTH=23.2003 CACHE_SIZE=500
 
 #ENTRYPOINT ["/bin/bash"]
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
